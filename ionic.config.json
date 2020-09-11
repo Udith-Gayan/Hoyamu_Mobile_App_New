@@ -1,0 +1,7 @@
+{
+  "name": "hoyamu-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
