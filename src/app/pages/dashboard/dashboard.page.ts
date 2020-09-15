@@ -21,7 +21,7 @@ export class DashboardPage implements OnInit {
       component: FooterComponent,
       cssClass: 'custom-css-for-modal-footer-in-dashboard',
       swipeToClose: true,
-      mode: 'ios',
+      mode: 'ios',      
     });
 
     modal.onWillDismiss().then((data) => {
