@@ -10,10 +10,10 @@
       </ion-row>
       <ion-row style="height: 25%;" class="ion-align-items-center button-row">
         <div class="btn-div">
-          <ion-button class=" ion-text-capitalize" expand="block" id="search-btn">
+          <ion-button class=" ion-text-capitalize" expand="block" id="search-btn" (click)="goTo(searchMenuPath)">
             Search Items
           </ion-button>
-          <ion-button expand="block" class="ion-text-capitalize" id="post-btn">
+          <ion-button expand="block" class="ion-text-capitalize" id="post-btn" (click)="goTo(postMenuPath)">
             Post Items
           </ion-button>
         </div>
