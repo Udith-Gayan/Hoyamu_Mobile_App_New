@@ -1,5 +1,6 @@
-import { Router } from '@angular/router';
+
 import { Component, OnInit } from '@angular/core';
+import { PageRouterService } from 'src/app/services/page-router.service';
 
 @Component({
   selector: 'app-language',
@@ -8,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LanguagePage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private pageRouter: PageRouterService) { }
 
   ngOnInit() {
   }
 
   onEnglishSelected() {
-    this.router.navigate(['/dashboard']);
+    this.pageRouter.goTo('dashboard');
   }
 
   onSinhalaSelected() {
-    this.router.navigate(['/dashboard']);
+    this.pageRouter.goTo('dashboard');
   }
 
 }

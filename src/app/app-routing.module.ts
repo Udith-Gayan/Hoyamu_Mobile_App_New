@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+  {
+    path: 'post-item-menu',
+    loadChildren: () => import('./pages/post-item-menu/post-item-menu.module').then( m => m.PostItemMenuPageModule)
+  },
+  {
+    path: 'search-item-menu',
+    loadChildren: () => import('./pages/search-item-menu/search-item-menu.module').then( m => m.SearchItemMenuPageModule)
+  },
 ];
 
 @NgModule({
