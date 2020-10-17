@@ -3,7 +3,18 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Post Item</ion-title>
+    <ion-row style="justify-content: space-between; align-items: center;">
+      <ion-col *ngIf="!showSearchBar">
+        <ion-title *ngIf="!showSearchBar" style="padding-left: 0">Post Item</ion-title>
+      </ion-col>
+      <ion-col>
+        <app-search-bar (onSearchBarVisible)="onSearchBarVisible($event)"
+                        (onTextChanged)="filterItem($event)"
+                        [searchStartingFrom]="2"
+                        >
+        </app-search-bar>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 

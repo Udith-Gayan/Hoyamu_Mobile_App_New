@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PostItemMenuPageRoutingModule } from './post-item-menu-routing.module';
 
 import { PostItemMenuPage } from './post-item-menu.page';
+import { SearchBarComponent } from 'src/app/common/components/search-bar/search-bar.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { PostItemMenuPage } from './post-item-menu.page';
     IonicModule,
     PostItemMenuPageRoutingModule
   ],
-  declarations: [PostItemMenuPage]
+  declarations: [PostItemMenuPage, SearchBarComponent]
 })
 export class PostItemMenuPageModule {}
