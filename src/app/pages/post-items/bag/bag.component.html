@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Item Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="mainCol">
+      <img src="assets/logos/homelogo.png" class="watermark">
+        <ion-item class="input-item">
+          <ion-label position="floating">Place Found :</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <custom-date-picker class="date-picker"
+          lang="2"
+          date_label="Date Found :"
+          (onDateChange)="onFondDateChanged($event)"
+          maxDate="2100"
+          minDate="2020-01-01"
+          displayFormat = "DD MMM YYYY"
+          pickerFormat = "DD MMM YYYY"
+          disabled="false">
+        </custom-date-picker>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

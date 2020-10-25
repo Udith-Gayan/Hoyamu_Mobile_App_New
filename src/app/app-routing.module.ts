@@ -27,6 +27,7 @@ const routes: Routes = [
     path: 'search-item-menu',
     loadChildren: () => import('./pages/search-item-menu/search-item-menu.module').then( m => m.SearchItemMenuPageModule)
   },
+
 ];
 
 @NgModule({
