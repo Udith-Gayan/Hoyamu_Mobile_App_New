@@ -1,4 +1,6 @@
+import { Item, ItemSubmitDto } from './../../../common/Dto/item-submit.model';
 import { Component, OnInit } from '@angular/core';
+import { ContactDto } from 'src/app/common/Dto/contact.model';
 
 @Component({
   selector: 'app-bag',
@@ -9,10 +11,40 @@ export class BagComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  item: ItemSubmitDto = new ItemSubmitDto();
+  isFieldsValid = false;
 
-  onFondDateChanged(event) {
-    console.log(event);
+  ngOnInit() {
+    this.item.item = new Item();
+    this.item.contact = new ContactDto();
+  }
+
+  onFoundDateChanged(event) {
+    this.item.item.dateFound = event;
+  }
+
+  onImageNameChanged(imageName: string){
+    if (['', null].includes(imageName.trim())) {
+      this.item.item.imageNameKey = null;
+    } else {
+      this.item.item.imageNameKey = imageName;
+    }
+  }
+
+  onPlaceFoundChange(){
+    if (this.item.item.placeFound != null && this.item.item.placeFound !== ''){
+      this.isFieldsValid = true;
+    } else {
+      this.isFieldsValid = false;
+    }
+  }
+
+  onSubmit(){
+    if (this.isFieldsValid) {
+      // set the object to storage and go to contact page
+    } else {
+      return;
+    }
   }
 
 }

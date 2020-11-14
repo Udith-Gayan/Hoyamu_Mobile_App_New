@@ -10,6 +10,7 @@ import { PostItemMenuPageRoutingModule } from './post-item-menu-routing.module';
 import { PostItemMenuPage } from './post-item-menu.page';
 import { SearchBarComponent } from 'src/app/common/components/search-bar/search-bar.component';
 import { DatePickerComponent } from 'src/app/common/components/date-picker/date-picker.component';
+import { ImgUploaderComponent } from 'src/app/common/components/img-uploader/img-uploader.component';
 
 @NgModule({
   entryComponents: [DatePickerComponent],
@@ -19,6 +20,6 @@ import { DatePickerComponent } from 'src/app/common/components/date-picker/date-
     IonicModule,
     PostItemMenuPageRoutingModule
   ],
-  declarations: [PostItemMenuPage, SearchBarComponent, BagComponent, DatePickerComponent]
+  declarations: [PostItemMenuPage, SearchBarComponent, BagComponent, DatePickerComponent, ImgUploaderComponent]
 })
 export class PostItemMenuPageModule {}
