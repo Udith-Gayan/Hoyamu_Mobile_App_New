@@ -11,21 +11,37 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DatePickerComponent } from './common/components/date-picker/date-picker.component';
-import { BagComponent } from './pages/post-items/bag/bag.component';
+
+import {NgxImageCompressService} from 'ngx-image-compress';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import { Camera } from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/File/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
+
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
-            FormsModule
+            FormsModule,
+            HttpClientModule
             ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    NgxImageCompressService,
+    Camera,
+    File,
+    WebView,
+    FilePath,
+    NativeStorage
   ],
-  exports:[],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

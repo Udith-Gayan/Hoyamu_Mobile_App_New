@@ -6,7 +6,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #1c6f84;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -95,6 +95,20 @@
 
 /** X Custom Hoyamu Color X **/
 
+    --ion-background-color: #ffffff;
+    --ion-background-color-rgb: 18,18,18;
+
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255,255,255;
+
+  --ion-item-background: #1e1e1e;
+  
+  --ion-toolbar-background: #1c6f84;
+  
+  --ion-tab-bar-background: #1f1f1f;
+  
+  --ion-card-background: #1e1e1e;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,7 +118,7 @@
    */
 
   body {
-    --ion-color-primary: #428cff;
+    --ion-color-primary: #1c6f84;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;
